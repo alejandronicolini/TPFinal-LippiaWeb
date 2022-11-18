@@ -20,13 +20,16 @@ public class ShopPageService extends WebActionManager {
         click(ShopPageConstants.BTN_HOMEMENU_XPATH);
     }
 
+    private static WebElement btnLibro;
     public static void clickBtnAddTobasket() {
-        click(ShopPageConstants.BTN_ADD_TO_BASKET_XPATH);
+        List<WebElement> listaBtnAdd = getElements(ShopPageConstants.LIST_BTN_ADD_TO_BASKET_XPATH);
+        btnLibro = listaBtnAdd.get(3);
+        click(btnLibro);
     }
 
     public static String locatorPrecioLibro; //variable invocada posteriormente
     public static void bookAttribute() {
-        String attrProductId = getAttribute(ShopPageConstants.BTN_ADD_TO_BASKET_XPATH, "data-product_id");
+        String attrProductId = btnLibro.getAttribute("data-product_id");
         locatorPrecioLibro = ShopPageConstants.BOOK_PRICE_XPATH.replace("xxx", attrProductId);
     }
 

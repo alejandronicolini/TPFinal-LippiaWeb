@@ -66,5 +66,4 @@ public class Steps_Section4_Shop extends PageSteps {
         ShopPageTestService.verifyTaxForCountry(taxIndia,taxOther);
     }
 
-
 }

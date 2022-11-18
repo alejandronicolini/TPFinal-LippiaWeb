@@ -1,4 +1,4 @@
-@FeatureShopTest @Smoke
+@FeatureShop @Smoke
 Feature: Section Shop
 
   Background:

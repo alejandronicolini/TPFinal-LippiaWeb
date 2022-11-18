@@ -1,4 +1,4 @@
-@FeatureHomePageTest @Smoke
+@FeatureHomePage @Smoke
 Feature: Seccion Home Page
 
   Background:
