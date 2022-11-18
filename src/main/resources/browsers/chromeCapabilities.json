@@ -1,0 +1,9 @@
+{
+	"browserName": "chrome",
+	"goog:chromeOptions": {"args": ["disable-infobars", "--ignore-certificate-errors", "start-maximized", "--disable-notifications","--load-extension=C:\\Users\\Alejandro\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Extensions\\cfhdojbkjhnklbpkdaibdccddilifddb\\3.14.2_0\\"],
+						   "excludeSwitches": ["disable-popup-blocking"],
+						   "extensions": [],
+						   "prefs": {"printing.enabled": false}
+	}, 
+	"platform": "ANY"
+} 
