@@ -15,7 +15,7 @@ public class MyAccountTestService extends ActionManager {
         Assert.assertEquals(mensaje, respuestaMensaje);
     }
 
-    public static void verifyLoginFail2(String mensaje) {
+    public static void verifyLoginFail(String mensaje) {
         String respuestaMensaje = getText(MyAccountPageConstants.DIV_TEXT_ERRORMESSAGE_XPATH);
         String mensajeEsperado = mensaje.replace("*my_username", MyAccountPageService.userName);
         Assert.assertTrue(respuestaMensaje.contains(mensajeEsperado));

@@ -16,11 +16,12 @@ Feature: My Account
   Scenario: 7. My Accounts-Account Details
     And Click on Account details
     Then User can view account details where he can change his password also
+    And AFTER TEST: signout
 
 
   @LogOut
   Scenario: 8. My Accounts-Log-Out
     And Click on Logout button
     Then On clicking logout,User successfully comes out from the site
-
+    And AFTER TEST: login - signout
 

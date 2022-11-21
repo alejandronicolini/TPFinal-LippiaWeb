@@ -28,7 +28,6 @@ public class Steps_Section5_Account extends PageSteps {
     @Then("User can view account details where he can change his password also")
     public void verifyAccountDetails() {
         MyAccountTestService.verifyAccountDetailsAndChangePass();
-        TpUtils.signOutUser();
     }
 
     @And("Click on Logout button")
@@ -39,6 +38,17 @@ public class Steps_Section5_Account extends PageSteps {
     @Then("On clicking logout,User successfully comes out from the site")
     public void verifyLogOut() {
         MyAccountTestService.verifyViewLoginPage();
+    }
+
+    @And("AFTER TEST: signout")
+    public void afterTESTSignout() {
+        TpUtils.signOutUser();
+    }
+
+    @And("AFTER TEST: login - signout")
+    public void afterTESTLoginSignout() {
+        TpUtils.hacerLogin();
+        TpUtils.signOutUser();
     }
 
 }

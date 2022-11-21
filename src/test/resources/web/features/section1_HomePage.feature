@@ -3,14 +3,14 @@ Feature: Seccion Home Page
 
   Background:
     Given the user is on the home page of practice.automationtesting.in
-    When clic on Shop Menu
+    And clic on Shop Menu
     And click on Home menu button
     And the Home page has Three Arrivals only
     And click the image in the Arrivals
     And navigating to next page where the user can add that book into his basket
     And click on the Add To Basket button which adds that book to your basket
     And the user can view that Book in the Menu item with price.
-    And Now click on Item link which navigates to proceed to check out page.
+    When Now click on Item link which navigates to proceed to check out page.
     And Now user can find total and subtotal values just above the Proceed to Checkout button.
     And The total always < subtotal because taxes are added in the subtotal
     And Now click on Proceed to Check out button which navigates to payment gateway page.

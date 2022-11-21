@@ -22,7 +22,7 @@ public class Steps_Section2_Login extends PageSteps {
 
     @Then("Login must fail saying: {string}")
     public void loginMustFailSaying(String mensaje) {
-        MyAccountTestService.verifyLoginFail2(mensaje);
+        MyAccountTestService.verifyLoginFail(mensaje);
     }
 
     @And("Once your are logged in, sign out of the site")

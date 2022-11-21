@@ -19,8 +19,8 @@ public class Steps_Section1_HomePage extends PageSteps {
     }
 
     @And("click the image in the Arrivals")
-    public void clicFistImageInTheArrivals() {
-        HomePageService.clickFistImgArrivals();
+    public void clicImageInTheArrivalsWithStock() {
+        HomePageService.clickImgArrivalsWithStock();
     }
 
     @And("navigating to next page where the user can add that book into his basket")

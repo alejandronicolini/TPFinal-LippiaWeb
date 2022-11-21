@@ -3,6 +3,7 @@ package lippia.web.services;
 import com.crowdar.core.PropertyManager;
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.driver.DriverManager;
+import lippia.web.constants.HomePageConstants;
 import lippia.web.constants.MyAccountPageConstants;
 import org.testng.Assert;
 
@@ -28,7 +29,7 @@ public class TpUtils extends ActionManager {
     }
 
     public static void createUser() {
-        info_email = "cursoCrowdar_v" + randomNum() + "@gmail.com";
+        info_email = "cursoCrowdar22_v" + randomNum() + "@gmail.com";
         info_password = "cursoCrowdarPass_" + randomNum();
 
         navigateTo("https://practice.automationtesting.in/my-account/");
@@ -50,6 +51,13 @@ public class TpUtils extends ActionManager {
         double random = Math.random();
         int num = (int) (Math.random() * (1000));
         return num;
+    }
+
+    public static void hacerLogin() {
+        click(HomePageConstants.BTN_MY_ACCOUNT_XPATH);
+        setInput(MyAccountPageConstants.INPUT_USER_NAME_ID, info_email);
+        setInput(MyAccountPageConstants.INPUT_LOGIN_PASSWORD_ID, info_password,true, false);
+        click(waitClickable(MyAccountPageConstants.BTN_LOGIN_XPATH));
     }
 
     public static void signOutUser() {

@@ -13,6 +13,7 @@ Feature: Login de usuario
     And Enter the case changed password in the password tetxbox
     And click on login button
     Then Login must fail saying: "Error: the password you entered for the username *my_username is incorrect."
+    And AFTER TEST: login - signout
 
 
   @LoginAuthentication
@@ -23,3 +24,5 @@ Feature: Login de usuario
     And Once your are logged in, sign out of the site
     And Now press back button
     Then User shouldn’t be signed in to his account rather a general webpage must be visible
+    And AFTER TEST: login - signout
+

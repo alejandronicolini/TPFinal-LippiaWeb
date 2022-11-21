@@ -25,7 +25,7 @@ public class Steps_Comunes extends PageSteps {
         TpUtils.createUser();
     }
 
-    @When("clic on Shop Menu")
+    @And("clic on Shop Menu")
     public void clicOnShopMenu() {
         HomePageService.clickBtnShopMenu();
     }

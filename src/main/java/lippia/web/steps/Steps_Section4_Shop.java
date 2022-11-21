@@ -3,6 +3,7 @@ package lippia.web.steps;
 import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import lippia.web.services.ShopPageService;
 import lippia.web.services.ShopPageTestService;
 
@@ -20,7 +21,7 @@ public class Steps_Section4_Shop extends PageSteps {
         ShopPageTestService.verifyCartAmount();
     }
 
-    @And("Now click on Item link which navigates to proceed to check out page.")
+    @When("Now click on Item link which navigates to proceed to check out page.")
     public void clickOnItemLinkToProceedToCheckOut() {
         ShopPageService.clickOnLinkCart();
     }
